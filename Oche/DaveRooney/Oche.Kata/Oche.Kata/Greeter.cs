@@ -6,10 +6,7 @@ namespace Oche.Kata
     {
         public string Execute(int hour, string username)
         {
-            if (hour > 23)
-            {
-                throw new ApplicationException("Hour cannot be more than 23");
-            }
+            GuardAgainstInvalidHour(hour);
 
             var greetingMessage = new StringBuilder();
             greetingMessage.Append("¡Buenas");
@@ -32,6 +29,14 @@ namespace Oche.Kata
             greetingMessage.Append(username);
 
             return greetingMessage.ToString();
+        }
+
+        private static void GuardAgainstInvalidHour(int hour)
+        {
+            if (hour > 23)
+            {
+                throw new ApplicationException("Hour cannot be more than 23");
+            }
         }
     }
 }
