@@ -29,7 +29,7 @@ namespace Oche.Kata.Tests
     {
         public string Execute(TimeSpan eveningTime)
         {
-            if (eveningTime.Hours >= 20)
+            if (eveningTime.Hours >= 20 || eveningTime.Hours < 6)
             {
                 return "¡Buenas noches";
             }
