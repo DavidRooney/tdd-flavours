@@ -13,4 +13,12 @@ namespace Oche.Kata.Tests
             Assert.That(result, Is.EqualTo("tset"));
         }
     }
+
+    public class Reverser
+    {
+        public string Execute(string testInput)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
