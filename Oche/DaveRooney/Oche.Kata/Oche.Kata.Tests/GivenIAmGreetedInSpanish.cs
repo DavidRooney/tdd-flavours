@@ -19,11 +19,9 @@ namespace Oche.Kata.Tests
         [TestCase(24)]
         public void WhenAnInvalidTimeIsSupplied_ThenFAIL(int hour)
         {
-            var username = "Dave";
-
             var sut = new Greeter();
 
-            Assert.Throws<ApplicationException>(() => sut.Execute(hour, username));
+            Assert.Throws<ApplicationException>(() => sut.Execute(hour, string.Empty));
         }
     }
 
