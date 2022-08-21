@@ -11,5 +11,15 @@ namespace Oche.Kata.Tests
 
             Assert.That(result, Is.EqualTo(expectedOutput));
         }
+
+        [Test]
+        public void WhenTheInputStringIsAPalindrome_ThenLikeIt()
+        {
+            var input = "oho";
+            var sut = new Reverser();
+            var result = sut.Execute(input);
+
+            Assert.That(result, Is.EqualTo($"{input} ¡Bonita palabra!"));
+        }
     }
 }
