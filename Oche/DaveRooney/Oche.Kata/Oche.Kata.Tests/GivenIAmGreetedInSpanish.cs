@@ -10,7 +10,7 @@ namespace Oche.Kata.Tests
             var sut = new Greeter();
             var result = sut.Execute(eveningTime, "Dave");
 
-            Assert.That(result, Is.EqualTo("¡Buenas noches"));
+            Assert.That(result, Is.EqualTo("¡Buenas noches Dave"));
         }
 
         [Test]
@@ -21,17 +21,17 @@ namespace Oche.Kata.Tests
             var sut = new Greeter();
             var result = sut.Execute(eveningTime, "Dave");
 
-            Assert.That(result, Is.EqualTo("¡Buenas noches"));
+            Assert.That(result, Is.EqualTo("¡Buenas noches Dave"));
         }
     }
 
     public class Greeter
     {
-        public string Execute(TimeSpan eveningTime)
+        public string Execute(TimeSpan eveningTime, string username)
         {
             if (eveningTime.Hours >= 20 || eveningTime.Hours < 6)
             {
-                return "¡Buenas noches";
+                return $"¡Buenas noches {username}";
             }
 
             return "FAIL";
