@@ -25,6 +25,7 @@ namespace Oche.Kata.Tests
         }
 
         [TestCase(6)]
+        [TestCase(11)]
         public void WhenItIsTheMorning_ThenDias_WithUsername(int hour)
         {
             var username = "Dave";
