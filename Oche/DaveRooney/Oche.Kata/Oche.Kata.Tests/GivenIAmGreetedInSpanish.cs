@@ -23,6 +23,17 @@ namespace Oche.Kata.Tests
 
             Assert.Throws<ApplicationException>(() => sut.Execute(hour, string.Empty));
         }
+
+        [TestCase(6)]
+        public void WhenItIsTheMorning_ThenDias_WithUsername(int hour)
+        {
+            var username = "Dave";
+
+            var sut = new Greeter();
+            var result = sut.Execute(hour, username);
+
+            Assert.That(result, Is.EqualTo($"¡Buenas dias {username}"));
+        }
     }
 
     public class Greeter
