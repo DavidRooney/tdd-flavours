@@ -4,7 +4,14 @@
     {
         public string Execute(string input)
         {
-            return string.Join("", input.ToCharArray().Reverse());
+            var reversedInput = string.Join("", input.ToCharArray().Reverse());
+
+            if (input == reversedInput)
+            {
+                return $"{reversedInput} ¡Bonita palabra!";
+            }
+
+            return reversedInput;
         }
     }
 }
