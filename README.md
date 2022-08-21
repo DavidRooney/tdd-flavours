@@ -12,10 +12,10 @@ Here, we can all learn the various flavours of TDD and make our go to coding too
 
 ## How to use this repository
 ### Code Kata's
-Each folder is a coding kata. Within each one is a collection of folders with names (hopefully some you recognise) who has performed the kata. Use the history of those folders to learn about how their process worked and view the final solution as a way to learn.
+Each folder is a coding kata with a Readme explaining the task. Within each one is a collection of folders with names (hopefully some you recognise) who has performed the kata. Use the history of those folders to learn about how their process worked and view the final solution as a way to learn.
 
 ### Adding you solution
 Submit a pull request 😃
 
-## My personal attempts at kata's
+## My personal attempt at kata's
 I've begin this repository with the Ohce kata. My process and solution may end up being an example how not to do it. Which I'm perfectly ok with. This is all about learning and helping future TDD evangelists.
