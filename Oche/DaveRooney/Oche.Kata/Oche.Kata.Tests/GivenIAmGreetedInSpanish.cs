@@ -50,6 +50,11 @@ namespace Oche.Kata.Tests
                 return $"¡Buenas noches {username}";
             }
 
+            if (hour >= 6 && hour < 12)
+            {
+                return $"¡Buenas dias {username}";
+            }
+
             return "Not set yet";
         }
     }
