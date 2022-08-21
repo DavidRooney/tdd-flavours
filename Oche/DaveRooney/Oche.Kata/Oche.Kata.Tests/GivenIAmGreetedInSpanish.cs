@@ -2,26 +2,19 @@ namespace Oche.Kata.Tests
 {
     public class GivenIAmGreetedInSpanish
     {
-        [Test]
-        public void WhenItIsTheEvening_ThenNoches_WithUsername()
+        [TestCase(20)]
+        [TestCase(23)]
+        [TestCase(00)]
+        [TestCase(05)]
+        public void WhenItIsTheEveningOrMorning_ThenNoches_WithUsername(int hour)
         {
-            var eveningTime = new TimeSpan(20, 0, 0);
+            var eveningTime = new TimeSpan(hour, 0, 0);
+            var username = "Dave";
 
             var sut = new Greeter();
-            var result = sut.Execute(eveningTime, "Dave");
+            var result = sut.Execute(eveningTime, username);
 
-            Assert.That(result, Is.EqualTo("¡Buenas noches Dave"));
-        }
-
-        [Test]
-        public void WhenItIsTheEarlyMorning_ThenNoches_WithUsername()
-        {
-            var eveningTime = new TimeSpan(3, 0, 0);
-
-            var sut = new Greeter();
-            var result = sut.Execute(eveningTime, "Dave");
-
-            Assert.That(result, Is.EqualTo("¡Buenas noches Dave"));
+            Assert.That(result, Is.EqualTo($"¡Buenas noches {username}"));
         }
     }
 
