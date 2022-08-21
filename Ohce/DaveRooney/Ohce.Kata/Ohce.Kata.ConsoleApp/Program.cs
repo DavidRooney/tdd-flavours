@@ -1,4 +1,4 @@
-﻿using Oche.Kata;
+﻿using Ohce.Kata;
 
 Console.WriteLine("Whats your name?");
 var usersName = Console.ReadLine();

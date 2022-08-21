@@ -1,4 +1,4 @@
-﻿namespace Oche.Kata
+﻿namespace Ohce.Kata
 {
     public class Reverser
     {

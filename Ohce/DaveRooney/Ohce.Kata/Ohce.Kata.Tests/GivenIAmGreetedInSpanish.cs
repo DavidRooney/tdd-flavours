@@ -1,4 +1,4 @@
-namespace Oche.Kata.Tests
+namespace Ohce.Kata.Tests
 {
     public class GivenIAmGreetedInSpanish
     {
@@ -16,11 +16,11 @@ namespace Oche.Kata.Tests
         [TestCase(23)]
         [TestCase(00)]
         [TestCase(05)]
-        public void WhenItIsTheEveningOrEarlyMorning_ThenNoches_WithUsername(int hour)
+        public void WhenItIsTheEveningOrEarlyMorning_ThenNOhces_WithUsername(int hour)
         {
             var result = _greeter.Execute(hour, _username);
 
-            Assert.That(result, Is.EqualTo($"¡Buenas noches {_username}"));
+            Assert.That(result, Is.EqualTo($"ï¿½BuenasOhcehes {_username}"));
         }
 
         [TestCase(24)]
@@ -35,7 +35,7 @@ namespace Oche.Kata.Tests
         {
             var result = _greeter.Execute(hour, _username);
 
-            Assert.That(result, Is.EqualTo($"¡Buenas dias {_username}"));
+            Assert.That(result, Is.EqualTo($"ï¿½Buenas dias {_username}"));
         }
 
         [TestCase(12)]
@@ -44,7 +44,7 @@ namespace Oche.Kata.Tests
         {
             var result = _greeter.Execute(hour, _username);
 
-            Assert.That(result, Is.EqualTo($"¡Buenas tardes {_username}"));
+            Assert.That(result, Is.EqualTo($"ï¿½Buenas tardes {_username}"));
         }
     }
 }

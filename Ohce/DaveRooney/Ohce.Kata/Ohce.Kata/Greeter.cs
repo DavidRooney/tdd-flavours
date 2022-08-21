@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Oche.Kata
+namespace Ohce.Kata
 {
     public class Greeter
     {

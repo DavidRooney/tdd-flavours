@@ -18,4 +18,4 @@ Each folder is a coding kata. Within each one is a collection of folders with na
 Submit a pull request 😃
 
 ## My personal attempts at kata's
-I've begin this repository with the Oche kata. My process and solution may end up being an example how not to do it. Which I'm perfectly ok with. This is all about learning and helping future TDD evangelists.
+I've begin this repository with the Ohce kata. My process and solution may end up being an example how not to do it. Which I'm perfectly ok with. This is all about learning and helping future TDD evangelists.

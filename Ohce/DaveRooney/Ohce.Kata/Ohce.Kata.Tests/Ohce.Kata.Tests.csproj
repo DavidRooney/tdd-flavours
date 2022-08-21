@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Oche.Kata\Oche.Kata.csproj" />
+    <ProjectReference Include="..\Ohce.Kata\Ohce.Kata.csproj" />
   </ItemGroup>
 
 </Project>

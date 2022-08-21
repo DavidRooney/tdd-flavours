@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oche.Kata.Tests", "Oche.Kata.Tests\Oche.Kata.Tests.csproj", "{74952B63-2919-479A-BDA9-54A172004B3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ohce.Kata.Tests", "Ohce.Kata.Tests\Ohce.Kata.Tests.csproj", "{74952B63-2919-479A-BDA9-54A172004B3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oche.Kata", "Oche.Kata\Oche.Kata.csproj", "{A7647777-4063-474A-8E13-D85CD806E6DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ohce.Kata", "Ohce.Kata\Ohce.Kata.csproj", "{A7647777-4063-474A-8E13-D85CD806E6DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oche.Kata.ConsoleApp", "Oche.Kata.ConsoleApp\Oche.Kata.ConsoleApp.csproj", "{49E5A26B-3919-449B-AA99-B88C38A52C35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ohce.Kata.ConsoleApp", "Ohce.Kata.ConsoleApp\Ohce.Kata.ConsoleApp.csproj", "{49E5A26B-3919-449B-AA99-B88C38A52C35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

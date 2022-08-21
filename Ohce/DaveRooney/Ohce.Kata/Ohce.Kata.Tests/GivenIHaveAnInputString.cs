@@ -1,4 +1,4 @@
-namespace Oche.Kata.Tests
+namespace Ohce.Kata.Tests
 {
     public class GivenIHaveAnInputString
     {
@@ -19,7 +19,7 @@ namespace Oche.Kata.Tests
             var sut = new Reverser();
             var result = sut.Execute(input);
 
-            Assert.That(result, Is.EqualTo($"{input} ¡Bonita palabra!"));
+            Assert.That(result, Is.EqualTo($"{input} ï¿½Bonita palabra!"));
         }
     }
 }
