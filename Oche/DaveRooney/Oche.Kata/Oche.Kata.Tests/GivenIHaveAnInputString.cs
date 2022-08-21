@@ -2,15 +2,14 @@ namespace Oche.Kata.Tests
 {
     public class GivenIHaveAnInputString
     {
-        [Test]
-        public void CanReverseText()
+        [TestCase("test", "tset")]
+        [TestCase("test 123 45", "54 321 tset")]
+        public void CanReverseText(string input, string expectedOutput)
         {
-            var testInput = "test";
-
             var sut = new Reverser();
-            var result = sut.Execute(testInput);
+            var result = sut.Execute(input);
 
-            Assert.That(result, Is.EqualTo("tset"));
+            Assert.That(result, Is.EqualTo(expectedOutput));
         }
     }
 
