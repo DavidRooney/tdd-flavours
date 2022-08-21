@@ -6,7 +6,7 @@ namespace Oche.Kata.Tests
         [TestCase(23)]
         [TestCase(00)]
         [TestCase(05)]
-        public void WhenItIsTheEveningOrMorning_ThenNoches_WithUsername(int hour)
+        public void WhenItIsTheEveningOrEarlyMorning_ThenNoches_WithUsername(int hour)
         {
             var username = "Dave";
 
