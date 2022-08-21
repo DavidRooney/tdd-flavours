@@ -13,17 +13,28 @@ namespace Oche.Kata.Tests
             Assert.That(result, Is.EqualTo("¡Buenas noches"));
         }
 
-        public class Greeter
+        [Test]
+        public void WhenItIsTheEarlyMorning_ThenNoches()
         {
-            public string Execute(TimeSpan eveningTime)
-            {
-                if (eveningTime.Hours >= 20)
-                {
-                    return "¡Buenas noches";
-                }
+            var eveningTime = new TimeSpan(3, 0, 0);
 
-                return "FAIL";
+            var sut = new Greeter();
+            var result = sut.Execute(eveningTime);
+
+            Assert.That(result, Is.EqualTo("¡Buenas noches"));
+        }
+    }
+
+    public class Greeter
+    {
+        public string Execute(TimeSpan eveningTime)
+        {
+            if (eveningTime.Hours >= 20)
+            {
+                return "¡Buenas noches";
             }
+
+            return "FAIL";
         }
     }
 }
