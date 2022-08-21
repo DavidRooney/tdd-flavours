@@ -16,9 +16,9 @@ namespace Oche.Kata.Tests
 
     public class Reverser
     {
-        public string Execute(string testInput)
+        public string Execute(string input)
         {
-            throw new NotImplementedException();
+            return string.Join("", input.ToCharArray().Reverse());
         }
     }
 }
