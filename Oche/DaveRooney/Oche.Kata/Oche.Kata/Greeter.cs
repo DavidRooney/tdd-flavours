@@ -1,4 +1,6 @@
-﻿namespace Oche.Kata
+﻿using System.Text;
+
+namespace Oche.Kata
 {
     public class Greeter
     {
@@ -9,22 +11,27 @@
                 throw new ApplicationException("Hour cannot be more than 23");
             }
 
+            var greetingMessage = new StringBuilder();
+            greetingMessage.Append("¡Buenas");
+
             if (hour >= 20 || hour < 6)
             {
-                return $"¡Buenas noches {username}";
+                greetingMessage.Append(" noches ");
             }
 
             if (hour >= 6 && hour < 12)
             {
-                return $"¡Buenas dias {username}";
+                greetingMessage.Append(" dias ");
             }
 
             if (hour >= 12 && hour < 20)
             {
-                return $"¡Buenas tardes {username}";
+                greetingMessage.Append(" tardes ");
             }
 
-            return "Not set yet";
+            greetingMessage.Append(username);
+
+            return greetingMessage.ToString();
         }
     }
 }
