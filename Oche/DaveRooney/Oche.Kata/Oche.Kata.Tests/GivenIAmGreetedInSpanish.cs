@@ -33,7 +33,7 @@ namespace Oche.Kata.Tests
         {
             if (hour > 23)
             {
-                return "FAIL";
+                throw new ApplicationException("Hour cannot be more than 23");
             }
 
             if (hour >= 20 || hour < 6)
