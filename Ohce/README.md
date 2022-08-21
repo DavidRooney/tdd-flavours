@@ -4,9 +4,6 @@ Original kata found [here](https://kata-log.rocks/ohce-kata)
 ## Credits
 Inspired by [Manuel Rivero](http://garajeando.blogspot.com/2016/05/the-ohce-kata-short-and-simple-exercise.html)
 
-## Goal
-A short and simple exercise to practice outside-in TDD using test doubles.
-
 ## Description
 ohce is a console application that echoes the reverse of what you input through the console.
 
