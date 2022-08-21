@@ -22,9 +22,8 @@ namespace Oche.Kata.Tests
             var username = "Dave";
 
             var sut = new Greeter();
-            var result = sut.Execute(hour, username);
 
-            Assert.That(result, Is.EqualTo("FAIL"));
+            Assert.Throws<ApplicationException>(() => sut.Execute(hour, username));
         }
     }
 
