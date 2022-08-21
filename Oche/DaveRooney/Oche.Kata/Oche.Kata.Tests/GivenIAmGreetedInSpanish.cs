@@ -8,11 +8,10 @@ namespace Oche.Kata.Tests
         [TestCase(05)]
         public void WhenItIsTheEveningOrMorning_ThenNoches_WithUsername(int hour)
         {
-            var eveningTime = new TimeSpan(hour, 0, 0);
             var username = "Dave";
 
             var sut = new Greeter();
-            var result = sut.Execute(eveningTime, username);
+            var result = sut.Execute(hour, username);
 
             Assert.That(result, Is.EqualTo($"¡Buenas noches {username}"));
         }
@@ -20,11 +19,10 @@ namespace Oche.Kata.Tests
         [TestCase(24)]
         public void WhenAnInvalidTimeIsSupplied_ThenFAIL(int hour)
         {
-            var eveningTime = new TimeSpan(hour, 0, 0);
             var username = "Dave";
 
             var sut = new Greeter();
-            var result = sut.Execute(eveningTime, username);
+            var result = sut.Execute(hour, username);
 
             Assert.That(result, Is.EqualTo("FAIL"));
         }
@@ -32,14 +30,14 @@ namespace Oche.Kata.Tests
 
     public class Greeter
     {
-        public string Execute(TimeSpan eveningTime, string username)
+        public string Execute(int hour, string username)
         {
-            if (eveningTime.Hours > 23)
+            if (hour > 23)
             {
                 return "FAIL";
             }
 
-            if (eveningTime.Hours >= 20 || eveningTime.Hours < 6)
+            if (hour >= 20 || hour < 6)
             {
                 return $"¡Buenas noches {username}";
             }
