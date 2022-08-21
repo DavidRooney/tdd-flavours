@@ -12,5 +12,13 @@ namespace Oche.Kata.Tests
 
             Assert.That(result, Is.Not.Null);
         }
+
+        public class Greeter
+        {
+            public object Execute(TimeSpan eveningTime)
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
