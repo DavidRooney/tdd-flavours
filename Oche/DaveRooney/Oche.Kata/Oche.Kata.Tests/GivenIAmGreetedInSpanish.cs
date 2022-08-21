@@ -34,12 +34,17 @@ namespace Oche.Kata.Tests
     {
         public string Execute(TimeSpan eveningTime, string username)
         {
+            if (eveningTime.Hours > 23)
+            {
+                return "FAIL";
+            }
+
             if (eveningTime.Hours >= 20 || eveningTime.Hours < 6)
             {
                 return $"¡Buenas noches {username}";
             }
 
-            return "FAIL";
+            return "Not set yet";
         }
     }
 }
