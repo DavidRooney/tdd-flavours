@@ -37,6 +37,15 @@ namespace Oche.Kata.Tests
 
             Assert.That(result, Is.EqualTo($"¡Buenas dias {_username}"));
         }
+
+        [TestCase(12)]
+        [TestCase(19)]
+        public void WhenItIsTheAfternoon_ThenTardes_WithUsername(int hour)
+        {
+            var result = _greeter.Execute(hour, _username);
+
+            Assert.That(result, Is.EqualTo($"¡Buenas tardes {_username}"));
+        }
     }
 
     public class Greeter
