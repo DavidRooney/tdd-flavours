@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oche.Kata.Tests", "Oche.Kata.Tests\Oche.Kata.Tests.csproj", "{74952B63-2919-479A-BDA9-54A172004B3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oche.Kata", "Oche.Kata\Oche.Kata.csproj", "{A7647777-4063-474A-8E13-D85CD806E6DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74952B63-2919-479A-BDA9-54A172004B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74952B63-2919-479A-BDA9-54A172004B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74952B63-2919-479A-BDA9-54A172004B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7647777-4063-474A-8E13-D85CD806E6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7647777-4063-474A-8E13-D85CD806E6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7647777-4063-474A-8E13-D85CD806E6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7647777-4063-474A-8E13-D85CD806E6DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
