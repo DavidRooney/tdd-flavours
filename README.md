@@ -14,7 +14,7 @@ Here, we can all learn the various flavours of TDD and make our go to coding too
 ### Code Kata's
 Each folder is a coding kata with a Readme explaining the task. Within each one is a collection of folders with names (hopefully some you recognise) who has performed the kata. Use the history of those folders to learn about how their process worked and view the final solution as a way to learn.
 
-### Adding you solution
+### Adding your solution
 Submit a pull request 😃
 
 ## My personal attempt at kata's
