@@ -5,15 +5,20 @@ import kotlin.test.assertEquals
 
 class TestGreetings {
 
-    @Test
-    fun `greets in the morning`() {
-        // given
-        // Ohce with clock set to morning
+    fun greet(hh: Int, name: String): String {
         val output = StringWriter()
+        sayHello(name, Time(hh=hh), PrintWriter(output))
+        return output.toString()
+    }
 
-        sayHello("Diego", Time(hh=7), PrintWriter(output))
+    @Test
+    fun `greets different people`() {
+        assertEquals("¡Buenos días Diego!", greet(7, "Diego"))
+        assertEquals("¡Buenos días Dora!", greet(7, "Dora"))
+    }
 
-        // it says good morning
-        assertEquals("¡Buenos días Diego!", output.toString())
+    @Test
+    fun `greets at different times of day`() {
+        assertEquals("¡Buenas noches Diego!", greet(20, "Diego"))
     }
 }
