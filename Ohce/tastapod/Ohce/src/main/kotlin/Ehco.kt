@@ -1,7 +1,15 @@
 import java.io.PrintWriter
+import java.time.LocalDateTime
 
-data class Time(val hh: Int, val mm: Int = 0)
+data class Time(val hour: Int, val minute: Int = 0)
 
-fun sayHello(name: String, time: Time, output: PrintWriter) {
-    output.print("¡Buenos días $name!")
+fun now() = LocalDateTime.now().let { Time(it.hour, it.minute) }
+
+fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
+    val greeting = when (time.hour) {
+        in 20..23, in 0..5 -> "Buenas noches"
+        in 12..19 -> "Buenas tardes"
+        else -> "Buenos días"
+    }
+    output.print("¡$greeting $name!")
 }
