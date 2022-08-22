@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
-import java.io.ByteArrayOutputStream
+import java.io.PrintWriter
+import java.io.StringWriter
 import kotlin.test.assertEquals
 
 class TestGreetings {
@@ -8,9 +9,9 @@ class TestGreetings {
     fun `greets in the morning`() {
         // given
         // Ohce with clock set to morning
-        val output = ByteArrayOutputStream()
+        val output = StringWriter()
 
-        sayHello("Diego", Time(hh=7), output)
+        sayHello("Diego", Time(hh=7), PrintWriter(output))
 
         // it says good morning
         assertEquals("¡Buenos días Diego!", output.toString())
