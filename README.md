@@ -1,6 +1,6 @@
 # TDD Flavours
 
-The goal of this repository is to be a treasure trove of insight into various kinds of flavours of TDD. We all know of Kent Becks amasing book __Test Driven Development by example__ and how it changed how we right software. 
+The goal of this repository is to be a treasure trove of insight into various kinds of flavours of TDD. We all know of Kent Becks amazing book __Test Driven Development by example__ and how it changed how we write software. 
 
 In the modern era of software development we have a lot more coders, with many learning from mentors, videos, or articles. We have new variations alongside old ones, and experts just out of reach that make it sound so easy. Yet we still struggle with it.
 
