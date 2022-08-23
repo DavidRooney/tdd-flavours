@@ -25,5 +25,6 @@ class TestEchoing {
     @Test
     fun `recognises palindromes`() {
         assertEquals("", checkPalindromeWith("not a palindrome"))
+        assertEquals("¡Bonita palabra!", checkPalindromeWith("abba o abba"))
     }
 }
