@@ -13,3 +13,5 @@ fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
     }
     output.print("¡$greeting $name!")
 }
+
+fun ohce(input: String, output: PrintWriter) = output.print(input.reversed())
