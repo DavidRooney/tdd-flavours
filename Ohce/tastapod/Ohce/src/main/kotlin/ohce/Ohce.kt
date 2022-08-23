@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 
 data class Time(val hour: Int, val minute: Int = 0)
 
-fun now() = LocalDateTime.now().let { Time(it.hour, it.minute) }
+fun now() = LocalDateTime.now().run { Time(hour = hour, minute = minute) }
 
 fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
     val greeting = when (time.hour) {
@@ -16,12 +16,38 @@ fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
     output.print("¡$greeting $name!")
 }
 
-fun ohce(input: String, output: PrintWriter) = output.print(input.reversed())
+fun ohce(input: String, output: PrintWriter) =
+    output.print(input.reversed())
 
-fun checkPalindrome(input: String, output: PrintWriter) =
-    output.print(if (input == input.reversed()) "¡Bonita palabra!" else "")
+fun isPalindrome(input: String) = input == input.reversed()
 
-fun checkStop(input: String) = input == "Stop!"
+fun isStop(input: String) = input == "Stop!"
 
 fun sayGoodbye(name: String, output: PrintWriter) =
     output.print("Adios $name")
+
+fun ohceSession(
+    name: String,
+    time: Time = now(),
+    input: Sequence<String> = generateSequence { readLine() },
+    output: PrintWriter = PrintWriter(System.out, true) //autoflush
+) {
+    fun println(fn: () -> Unit) = output.run { fn(); println() }
+
+    // start
+    println { sayHello(name, time, output) }
+
+    // iterate on input
+    for (line in input) {
+        if (isStop(line)) {
+            break
+        }
+
+        println { ohce(line, output) }
+
+        if (isPalindrome(line)) {
+            output.println("¡Bonita palabra!")
+        }
+    }
+    println { sayGoodbye(name, output) }
+}

@@ -19,20 +19,15 @@ class TestEchoing {
         assertEquals("abba", ohceWith("abba"))
     }
 
-    private fun checkPalindromeWith(input: String) = with(StringWriter()) {
-        checkPalindrome(input, PrintWriter(this))
-        toString()
-    }
-
     @Test
     fun `recognises palindromes`() {
-        assertEquals("", checkPalindromeWith("not a palindrome"))
-        assertEquals("¡Bonita palabra!", checkPalindromeWith("abba o abba"))
+        assertFalse(isPalindrome("not a palindrome"))
+        assertTrue(isPalindrome("abba o abba"))
     }
 
     @Test
     fun `recognises Stop!`() {
-        assertFalse(checkStop("don't stop yet"))
-        assertTrue(checkStop("Stop!"))
+        assertFalse(isStop("don't stop yet"))
+        assertTrue(isStop("Stop!"))
     }
 }

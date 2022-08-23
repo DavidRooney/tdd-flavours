@@ -48,5 +48,4 @@ class TestGreetings {
         assertEquals("Adios Diego", sayGoodbyWith("Diego"))
         assertEquals("Adios Dora", sayGoodbyWith("Dora"))
     }
-
 }
