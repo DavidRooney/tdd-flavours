@@ -23,4 +23,5 @@ fun checkPalindrome(input: String, output: PrintWriter) =
 
 fun checkStop(input: String) = input == "Stop!"
 
-fun sayGoodbye(name: String, output: PrintWriter) = output.print("")
+fun sayGoodbye(name: String, output: PrintWriter) =
+    output.print("Adios $name")

@@ -46,6 +46,7 @@ class TestGreetings {
     @Test
     fun `says goodbye`() {
         assertEquals("Adios Diego", sayGoodbyWith("Diego"))
+        assertEquals("Adios Dora", sayGoodbyWith("Dora"))
     }
 
 }
