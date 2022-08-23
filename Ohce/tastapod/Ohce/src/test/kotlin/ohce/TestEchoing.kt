@@ -1,6 +1,7 @@
 package ohce
 
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.io.PrintWriter
 import java.io.StringWriter
@@ -32,5 +33,6 @@ class TestEchoing {
     @Test
     fun `recognises Stop!`() {
         assertFalse(checkStop("don't stop yet"))
+        assertTrue(checkStop("Stop!"))
     }
 }
