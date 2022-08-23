@@ -1,3 +1,5 @@
+package ohce
+
 import java.io.PrintWriter
 import java.time.LocalDateTime
 
@@ -15,3 +17,5 @@ fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
 }
 
 fun ohce(input: String, output: PrintWriter) = output.print(input.reversed())
+
+fun checkPalindrome(input: String, output: PrintWriter) = ""

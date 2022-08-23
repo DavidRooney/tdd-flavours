@@ -1,3 +1,5 @@
+package ohce
+
 import org.junit.jupiter.api.Test
 import java.io.PrintWriter
 import java.io.StringWriter
@@ -12,6 +14,7 @@ class TestEchoing {
     @Test
     fun `reverses its input`() {
         assertEquals("sdrawkcab", ohceWith("backwards"))
+        assertEquals("abba", ohceWith("abba"))
     }
 
     private fun checkPalindromeWith(input: String) = with(StringWriter()) {
