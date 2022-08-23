@@ -6,10 +6,9 @@ import kotlin.test.assertEquals
 
 class TestGreetings {
 
-    fun sayHelloWith(hour: Int, name: String): String {
-        val output = StringWriter()
-        sayHello(name, Time(hour = hour), PrintWriter(output))
-        return output.toString()
+    private fun sayHelloWith(hour: Int, name: String) = with(StringWriter()) {
+        sayHello(name, Time(hour = hour), PrintWriter(this))
+        toString()
     }
 
     @Test
