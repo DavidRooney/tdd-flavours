@@ -21,3 +21,4 @@ fun ohce(input: String, output: PrintWriter) = output.print(input.reversed())
 fun checkPalindrome(input: String, output: PrintWriter) =
     output.print(if (input == input.reversed()) "¡Bonita palabra!" else "")
 
+fun checkStop(input: String) = false

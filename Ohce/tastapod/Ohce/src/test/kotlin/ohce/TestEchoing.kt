@@ -1,5 +1,6 @@
 package ohce
 
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test
 import java.io.PrintWriter
 import java.io.StringWriter
@@ -26,5 +27,10 @@ class TestEchoing {
     fun `recognises palindromes`() {
         assertEquals("", checkPalindromeWith("not a palindrome"))
         assertEquals("¡Bonita palabra!", checkPalindromeWith("abba o abba"))
+    }
+
+    @Test
+    fun `recognises Stop!`() {
+        assertFalse(checkStop("don't stop yet"))
     }
 }
