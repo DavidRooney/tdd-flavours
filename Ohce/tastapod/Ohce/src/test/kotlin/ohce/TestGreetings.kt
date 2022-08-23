@@ -37,4 +37,15 @@ class TestGreetings {
         val currentTime = LocalDateTime.now()
         assertEquals(Time(currentTime.hour, currentTime.minute), now())
     }
+
+    private fun sayGoodbyWith(name: String) = with (StringWriter()) {
+        sayGoodbye(name, PrintWriter(this))
+        toString()
+    }
+
+    @Test
+    fun `says goodbye`() {
+        assertEquals("Adios Diego", sayGoodbyWith("Diego"))
+    }
+
 }

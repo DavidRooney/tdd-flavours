@@ -22,3 +22,5 @@ fun checkPalindrome(input: String, output: PrintWriter) =
     output.print(if (input == input.reversed()) "¡Bonita palabra!" else "")
 
 fun checkStop(input: String) = input == "Stop!"
+
+fun sayGoodbye(name: String, output: PrintWriter) = output.print("")
