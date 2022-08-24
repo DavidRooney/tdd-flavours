@@ -7,7 +7,7 @@ data class Time(val hour: Int, val minute: Int = 0)
 
 fun now() = LocalDateTime.now().run { Time(hour = hour, minute = minute) }
 
-fun sayHello(name: String, time: Time = now(), output: PrintWriter) {
+fun sayHello(name: String, time: Time, output: PrintWriter) {
     val greeting = when (time.hour) {
         in 20..23, in 0..5 -> "Buenas noches"
         in 12..19 -> "Buenas tardes"
@@ -26,12 +26,7 @@ fun isStop(input: String) = input == "Stop!"
 fun sayGoodbye(name: String, output: PrintWriter) =
     output.print("Adios $name")
 
-fun ohceSession(
-    name: String,
-    time: Time = now(),
-    input: Sequence<String> = generateSequence { readLine() },
-    output: PrintWriter = PrintWriter(System.out, true) //autoflush
-) {
+fun ohceSession(name: String, time: Time, input: Sequence<String>, output: PrintWriter) {
     fun println(fn: () -> Unit) = output.run { fn(); println() }
 
     // start
